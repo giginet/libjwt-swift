@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "libjwt",
+    name: "JWT",
     providers: [
         .brew(["libjwt"]),
         .apt(["libjwt"]),
@@ -12,5 +12,15 @@ let package = Package(
     dependencies: [
         .package(url: "git@github.com:giginet/jansson-Swift.git", from: "1.0.0"),
         .package(url: "git@github.com:IBM-Swift/OpenSSL.git", from: "1.0.0"),
+    ],
+    products: [
+        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .library(
+            name: "JWT",
+            targets: ["JWT"]
+        )
+    ],
+    targets: [
+        .target(name: "JWT")
     ]
 )

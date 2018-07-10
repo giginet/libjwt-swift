@@ -1,4 +1,4 @@
-module libjwt [system] {
+module JWT [system] {
   header "jwt.h"
   link "jwt"
   export *

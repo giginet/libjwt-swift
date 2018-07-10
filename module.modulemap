@@ -1,0 +1,5 @@
+module libjwt [system] {
+  header "jwt.h"
+  link "jwt"
+  export *
+}
